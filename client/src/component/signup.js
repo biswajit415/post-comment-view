@@ -43,7 +43,7 @@ class login extends Component {
                         })
                     }
                     else
-                        window.location = "/"
+                        window.location = "/login"
                 })
         }
         else {
@@ -130,7 +130,7 @@ class login extends Component {
                             Submit
                             </button >
                             &nbsp;&nbsp;&nbsp;
-                        <Link to="/"  > Go To Login</Link>
+                        <Link to="/login"  > Go To Login</Link>
                     </div>
                 </form>
 
