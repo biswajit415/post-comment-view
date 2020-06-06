@@ -23,7 +23,7 @@ class login extends Component {
         }
         if (this.isValid(this.state)) {
             this.setState({ errors: '' })
-            axios.post('http://localhost:5000/api/login', dataToSubmit)
+            axios.post('/api/login', dataToSubmit)
                 .then(res => {
                     console.log(res.data)
                     if (res.data.loginSuccess === false) {
