@@ -6,8 +6,11 @@ router.post("/register", (req, res) => {
 
     const userDetail = new user(req.body);
     const email = req.body.email;
+
     user.find({ email: email }, (err, data) => {
-        if (data.length == 0)
+
+        console.log(data)
+        if (data.length != 0)
             return res.json({
                 success: false,
                 messege: "Already signed up"
