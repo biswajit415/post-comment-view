@@ -27,9 +27,8 @@ class Navbar extends Component {
 
             <div className='container'>
                 <nav>
-                    <div className="nav-wrapper">
-
-                        <ul id="nav-mobile" className="left hide-on-med-and-down">
+                    <div class="nav-content">
+                        <ul className="tabs-transparent">
                             <li>  <Link to="/addPost" className="nav-link ml-auto">Add Post</Link></li>
                             <li>  <Link to="/viewPost" className="nav-link ml-auto">View Post</Link></li>
                             <li> <a className="nav-link ml-auto" onClick={this.loggedout}> logOut</a></li>
