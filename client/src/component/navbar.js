@@ -11,7 +11,7 @@ class Navbar extends Component {
     }
     loggedout = () => {
 
-        axios.get('http://localhost:5000/api/logout/' + localStorage.getItem('myId'))
+        axios.get('/api/logout/' + localStorage.getItem('myId'))
             .then(res => {
                 console.log(res.data)
                 if (res.data.success == true) {

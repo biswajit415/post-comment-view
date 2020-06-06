@@ -14,7 +14,7 @@ class viewPost extends Component {
             window.location = "/login"
             return
         }
-        axios.get('http://localhost:5000/api/view-post/' + localStorage.getItem('myId')).
+        axios.get('/api/view-post/' + localStorage.getItem('myId')).
             then(res => {
                 console.log(res.data);
                 if (res.data.authentication === false) {

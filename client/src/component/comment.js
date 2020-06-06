@@ -17,7 +17,7 @@ class comment extends Component {
 
     componentDidMount() {
 
-        axios.get('http://localhost:5000/api/fetch-post/' + this.props.match.params.id + '/' +
+        axios.get('/api/fetch-post/' + this.props.match.params.id + '/' +
             localStorage.getItem('myId'))
             .then(res => {
                 if (res.data.authentication === false) {
@@ -49,7 +49,7 @@ class comment extends Component {
             comment: this.state.myComment
         }
 
-        axios.post('http://localhost:5000/api/add-comment/' + localStorage.getItem('myId'), dataToSubmit).
+        axios.post('/api/add-comment/' + localStorage.getItem('myId'), dataToSubmit).
             then(res => {
                 window.location = `/addComment/${this.state.id}`
             })

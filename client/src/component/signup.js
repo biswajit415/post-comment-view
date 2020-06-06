@@ -33,7 +33,7 @@ class login extends Component {
 
         else if (this.state.password === this.state.cnfpassword) {
 
-            axios.post('http://localhost:5000/api/register', dataToSubmit)
+            axios.post('/api/register', dataToSubmit)
 
                 .then(res => {
                     console.log(this.state)

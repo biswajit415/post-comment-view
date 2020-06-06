@@ -23,7 +23,7 @@ class Addpost extends Component {
             post: this.state.post
         }
         //console.log(dataToSubmit)
-        axios.post('http://localhost:5000/api/add-post/' + localStorage.getItem('myId'), dataToSubmit)
+        axios.post('/api/add-post/' + localStorage.getItem('myId'), dataToSubmit)
             .then(res => {
                 if (res.data.authentication === false)
                     window.location = "/login"
