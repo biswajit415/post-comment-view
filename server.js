@@ -6,7 +6,7 @@ const cors = require('cors')
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const config = require("./config/key");
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5000;
 const connect = mongoose.connect(config.mongoURI,
     {
         useNewUrlParser: true, useUnifiedTopology: true,
